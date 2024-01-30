@@ -1,0 +1,16 @@
+table {
+  width: 100vw;
+  height: 100vh;
+}
+
+#first {
+  color: white;
+  background-color: green;
+  padding: 50px;
+}
+
+#second {
+  color: white;
+  background-color: red;
+  padding: 50px;
+}

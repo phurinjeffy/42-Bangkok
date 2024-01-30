@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="calc">
+    <input type="text" id="left"/>
+
+    <select id="operator" name="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+
+    <input type="text" id="right"/>
+
+    <input type="submit" id="submit" value="Try me!"/>
+  </form>
+
+  <script>
+    const form = document.getElementById('calc');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const leftValue = parseFloat(document.getElementById('left').value);
+      const rightValue = parseFloat(document.getElementById('right').value);
+      const operator = document.getElementById('operator');
+
+      if (Number.isInteger(leftValue) && Number.isInteger(rightValue) && leftValue >= 0 && rightValue >= 0 && operator ) {
+        const operatorValue = operator.value;
+        let result;
+
+        switch (operatorValue) {
+          case '+':
+            result = leftValue + rightValue;
+            break;
+          case '-':
+            result = leftValue - rightValue;
+            break;
+          case '*':
+            result = leftValue * rightValue;
+            break;
+          case '/':
+            if (rightValue !== 0) {
+              result = leftValue / rightValue;
+            } else {
+              result = "It's over 9000!";
+            }
+            break;
+          case '%':
+            if (rightValue !== 0) {
+              result = leftValue % rightValue;
+            } else {
+              result = "It's over 9000!";
+            }
+            break;
+        }
+
+        console.log(result)
+        alert(result)
+      } else {
+        alert("Error :(")
+      }
+    });
+
+    function showAlert() {
+      alert('Please, use me...');
+    }
+    setInterval(showAlert, 30000);
+  </script>
+</body>
+</html>

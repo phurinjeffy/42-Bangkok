@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .balloon {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      border-radius: 100%;
+    }
+  </style>
+</head>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <div class="balloon" id="balloon"></div>
+  <script>
+    const balloon = document.getElementById('balloon');
+    let size = 200;
+    let colorIndex = 0;
+
+    balloon.addEventListener('click', () => {
+      size += 10;
+      if (size > 420) {
+        size = 200;
+      }
+      changeColor(false);
+      updateBalloon();
+    });
+
+    balloon.addEventListener('mouseout', () => {
+      size -= 5;
+      if (size < 200) {
+        size = 200;
+      }
+      changeColor(true);
+      updateBalloon();
+    });
+
+    function changeColor(reverse) {
+      const colors = ['red', 'green', 'blue'];
+      if (reverse) {
+        colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+      } else {
+        colorIndex = (colorIndex + 1) % colors.length;
+      }
+      balloon.style.backgroundColor = colors[colorIndex];
+    }
+
+    function updateBalloon() {
+      balloon.style.width = `${size}px`;
+      balloon.style.height = `${size}px`;
+    }
+  </script>
+</body>
+</html>
