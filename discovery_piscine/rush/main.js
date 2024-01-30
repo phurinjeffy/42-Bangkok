@@ -1,8 +1,9 @@
 import './style.css'
 
-const home = `<div class="flex flex-col justify-center items-center my-auto mx-auto w-screen h-screen">
-                <img src="/wallpaper.jpg" class="inset-0 z-0 absolute w-screen h-screen"/>
-                <h1 class="font-bold text-7xl z-10 text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+const home = `
+              <img src="/wallpaper.jpg" class="inset-0 z-0 absolute w-screen h-screen"/>
+              <div class="flex flex-col justify-center items-center w-screen h-screen">
+                <h1 class="font-bold text-6xl z-10 text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
                     My CVs Website
                 </h1>
                 <p class="font-light text-2xl m-8 z-10 text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
