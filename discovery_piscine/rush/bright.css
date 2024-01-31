@@ -21,8 +21,6 @@
 
 .sidebar-header a {
   display: block;
-  height: 120px;
-  width: 120px;
   margin: 63px 75px;
 }
 
@@ -202,6 +200,10 @@
   line-height: 30px;
 }
 
+.entry-description ul{
+  list-style: disc;
+}
+
 .keyword-list {
   margin-top: 100px;
   margin-bottom: -50px;
@@ -235,7 +237,6 @@
 }
 
 .footer-subtitle {
-  color: #676767;
   font-size: 16px !important;
   line-height: 26px !important;
   margin-bottom: 40px;

@@ -20,8 +20,6 @@
 
 .sidebar-header a {
   display: block;
-  height: 120px;
-  width: 120px;
   margin: 63px 75px;
 }
 
@@ -181,6 +179,10 @@
 
 .entry-header {
   margin-bottom: 40px;
+}
+
+.entry-description ul{
+  list-style: disc;
 }
 
 .position {
