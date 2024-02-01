@@ -105,6 +105,10 @@ table h2 {
 .section {
     width: 100%;
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .header {
